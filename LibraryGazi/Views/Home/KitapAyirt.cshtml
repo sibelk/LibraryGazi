@@ -1,0 +1,34 @@
+﻿@model IEnumerable<LibraryGazi.Entity.Book>
+
+
+
+
+
+
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Kitap Adı </th>
+            <th>Yazar Adı</th>
+            <th>Yayınevi</th>
+            <th>Kategori</th>
+            <th>işlem</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var kitap in Model)
+        {
+
+        <tr>
+            <td>@kitap.bookName</td>
+            <td>@kitap.Author.author_name</td>
+            <td>@kitap.Publisher.publisher_name</td>
+            <td>@kitap.Category.category_name</td>
+            <td>
+                <a href="/Home/Details/@kitap.Id"> Detaylar</a>
+        </tr>
+        }
+    </tbody>
+</table>

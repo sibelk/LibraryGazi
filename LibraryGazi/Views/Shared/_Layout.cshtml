@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="/template/css/style.css">
+    <link rel="stylesheet" href="/template/css/bootstrap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+</head>
+<body>
+    <nav class="navbar navbar-dark navbar-expand-md" style="background-color:cornflowerblue">
+        <div class="container">
+            <a href="/Home/Index" class="navbar-brand">
+                <i class="fas fa-book"></i> &nbsp;GaziLib
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="/Home/Hakkinda" class="nav-link active">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Home/Sartlar" class="nav-link active">Kullanım Şartları</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/Home/İletisim" class="nav-link active">İletişim</a>
+                    </li>
+
+
+                </ul>
+                @Html.Action("Summary","Cart")
+                @Html.Partial("_LoginPartial")
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="container pb-5" >
+
+        @RenderBody()
+
+    </div>
+
+    <footer class="footer bg-dark">
+        <h5 class="text-white text-center"> GaziLib. Tüm hakları saklıdır. @DateTime.Now.Year</h5>
+    </footer>
+
+    
+</body>
+</html>

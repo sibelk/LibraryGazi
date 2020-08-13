@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width:device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <link rel="stylesheet" href="css/style0.css">
+    <link rel="stylesheet" href="js/profile.js">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-dark fixed-top navbar-expand-sm" style="background-color: orangered">
+        <div class="container">
+            <a href="/" class="navbar-brand">
+                <i class="fas fa-users"></i> &nbsp;GROUPS
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">ANASAYFA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="groups.html" class="nav-link active">GRUPLARIM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="profile.html" class="nav-link active"><i class="fas fa-user"></i> &nbsp;PROFİL</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <header>
+        <div class="jumbotron  text-white" style="background-color: white">
+
+        </div>
+    </header>
+    <div class="container bootstrap snippet">
+        <div class="row">
+            <div class="col-sm-10">
+                <h1>Sibel Keleş</h1>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <!--left col-->
+
+
+                <div class="text-center">
+                    <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+                    <h6>Upload a different photo...</h6>
+                    <input type="file" class="text-center center-block file-upload">
+                </div>
+                <br>
+                <ul class="list-group">
+                    <li class="list-group-item text-muted">Aktiviteler <i class="fa fa-dashboard fa-1x"></i></li>
+                    <li class="list-group-item text-left"><span class="pull-left"><strong>Gruplarım</strong></span>
+                        <span id="toplam-grup" class="badge badge-info">3</span></li>
+                    <li class="list-group-item text-left"><span class="pull-left"><strong>Yakındaki Etkinlikler</strong></span>
+                        <span id="yakinda-etkinlik" class="badge badge-info">2</span></li>
+                    <li class="list-group-item text-left"><span class="pull-left"><strong>Katıldığım Etkinlikler</strong></span>
+                        <span id="katildin-etkinlik" class="badge badge-info">5</span></li>
+                    <li class="list-group-item text-left"><span class="pull-left"><strong>Yardım</strong></span></li>
+                </ul>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">Social Media</div>
+                    <div class="panel-body">
+                        <i class="fa fa-facebook fa-2x"></i> <i class="fa fa-github fa-2x"></i> <i class="fa fa-twitter fa-2x"></i> <i class="fa fa-pinterest fa-2x"></i> <i class="fa fa-google-plus fa-2x"></i>
+                    </div>
+                </div>
+
+            </div>
+            <!--/col-3-->
+            <div class="col-sm-9">
+                <ul class="nav nav-tabs">
+
+                    <li class=" nav-item active"><a class="nav-link" data-toggle="tab" href="#home">Akış</a></li>
+
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="setting.html">Profil Ayarları</a></li>
+
+
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="help.html">Yardım</a></li>
+
+                </ul>
+
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="home">
+                        <br>
+                        <form class="form" action="##" method="post" id="reregistrationForm">
+                            <div class="form-group">
+
+                                <div class="col-xs-6">
+                                    <label for="first_name">
+                                        <h4>AD</h4>
+                                    </label>
+                                    <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any.">
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                                <div class="col-xs-6">
+                                    <label for="last_name">
+                                        <h4>SOYAD</h4>
+                                    </label>
+                                    <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any.">
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                                <div class="col-xs-6">
+                                    <label for="email">
+                                        <h4>Email</h4>
+                                    </label>
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email.">
+                                </div>
+                            </div>
+
+
+                            <div id="abc" class="form-group">
+                                <div class="col-xs-6">
+                                    <label for="mobile">
+                                        <h4>HOBİLERİM</h4>
+                                    </label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" id="hobi" class="form-control" placeholder="hobi ekle">
+                                        <div class="input-group-append">
+                                            <button id="ekle" onclick="inputekle()" class="btn btn-success" type="button"><i class="fas fa-plus"></i> &nbsp;EKLE</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+
+                                <div class="col-xs-6">
+                                    <label for="city">
+                                        <h4>ŞEHİR</h4>
+                                    </label>
+                                    <select name="city" class="form-control">
+
+                                        <option value="0">------</option>
+                                        <option value="1">Adana</option>
+                                        <option value="2">Adıyaman</option>
+                                        <option value="3">Afyonkarahisar</option>
+                                        <option value="4">Ağrı</option>
+                                        <option value="5">Amasya</option>
+                                        <option value="6">Ankara</option>
+                                        <option value="7">Antalya</option>
+                                        <option value="8">Artvin</option>
+                                        <option value="9">Aydın</option>
+                                        <option value="10">Balıkesir</option>
+                                        <option value="11">Bilecik</option>
+                                        <option value="12">Bingöl</option>
+                                        <option value="13">Bitlis</option>
+                                        <option value="14">Bolu</option>
+                                        <option value="15">Burdur</option>
+                                        <option value="16">Bursa</option>
+                                        <option value="17">Çanakkale</option>
+                                        <option value="18">Çankırı</option>
+                                        <option value="19">Çorum</option>
+                                        <option value="20">Denizli</option>
+                                        <option value="21">Diyarbakır</option>
+                                        <option value="22">Edirne</option>
+                                        <option value="23">Elazığ</option>
+                                        <option value="24">Erzincan</option>
+                                        <option value="25">Erzurum</option>
+                                        <option value="26">Eskişehir</option>
+                                        <option value="27">Gaziantep</option>
+                                        <option value="28">Giresun</option>
+                                        <option value="29">Gümüşhane</option>
+                                        <option value="30">Hakkâri</option>
+                                        <option value="31">Hatay</option>
+                                        <option value="32">Isparta</option>
+                                        <option value="33">Mersin</option>
+                                        <option value="34">İstanbul</option>
+                                        <option value="35">İzmir</option>
+                                        <option value="36">Kars</option>
+                                        <option value="37">Kastamonu</option>
+                                        <option value="38">Kayseri</option>
+                                        <option value="39">Kırklareli</option>
+                                        <option value="40">Kırşehir</option>
+                                        <option value="41">Kocaeli</option>
+                                        <option value="42">Konya</option>
+                                        <option value="43">Kütahya</option>
+                                        <option value="44">Malatya</option>
+                                        <option value="45">Manisa</option>
+                                        <option value="46">Kahramanmaraş</option>
+                                        <option value="47">Mardin</option>
+                                        <option value="48">Muğla</option>
+                                        <option value="49">Muş</option>
+                                        <option value="50">Nevşehir</option>
+                                        <option value="51">Niğde</option>
+                                        <option value="52">Ordu</option>
+                                        <option value="53">Rize</option>
+                                        <option value="54">Sakarya</option>
+                                        <option value="55">Samsun</option>
+                                        <option value="56">Siirt</option>
+                                        <option value="57">Sinop</option>
+                                        <option value="58">Sivas</option>
+                                        <option value="59">Tekirdağ</option>
+                                        <option value="60">Tokat</option>
+                                        <option value="61">Trabzon</option>
+                                        <option value="62">Tunceli</option>
+                                        <option value="63">Şanlıurfa</option>
+                                        <option value="64">Uşak</option>
+                                        <option value="65">Van</option>
+                                        <option value="66">Yozgat</option>
+                                        <option value="67">Zonguldak</option>
+                                        <option value="68">Aksaray</option>
+                                        <option value="69">Bayburt</option>
+                                        <option value="70">Karaman</option>
+                                        <option value="71">Kırıkkale</option>
+                                        <option value="72">Batman</option>
+                                        <option value="73">Şırnak</option>
+                                        <option value="74">Bartın</option>
+                                        <option value="75">Ardahan</option>
+                                        <option value="76">Iğdır</option>
+                                        <option value="77">Yalova</option>
+                                        <option value="78">Karabük</option>
+                                        <option value="79">Kilis</option>
+                                        <option value="80">Osmaniye</option>
+                                        <option value="81">Düzce</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                                <div class="col-xs-6">
+                                    <label for="password">
+                                        <h4>PAROLA</h4>
+                                    </label>
+                                    <input type="password" class="form-control" name="password" id="password" placeholder="password" title="enter your password.">
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                                <div class="col-xs-6">
+                                    <label for="password2">
+                                        <h4>PAROLA EŞLEŞTİR</h4>
+                                    </label>
+                                    <input type="password" class="form-control" name="password2" id="password2" placeholder="password2" title="enter your password2.">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <br>
+                                    <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
+                                    <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <hr>
+
+                    </div>
+                    <!--/tab-pane-->
+                    <div class="tab-pane" id="ayarlar">
+                    
+                    
+                    </div>
+
+                    <!--/tab-pane-->
+                    <div class="tab-pane" id="yardım">
+
+
+
+                    </div>
+
+
+                    <!--/tab-pane-->
+                </div>
+                <!--/tab-content-->
+            </div>
+        </div>
+        <!--/col-9-->
+    </div>
+    <!--/row-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        function inputekle() {
+
+            var label = $("#hobi").val();
+            $("#abc").after(label); //ayarla    
+
+
+        };
+
+    </script>
+
+</body>
+
+</html>

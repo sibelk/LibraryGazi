@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+
+}
+body {
+    background-color: #0fe7ca;
+}
+
+
+
+
+.form-group {
+    margin-bottom: 3%;
+    
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 3%;
+    color: white;
+}
+
+.form-control {
+    width: 100%;
+    padding: 7px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    outline: 0;
+}
+
+.butn {
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: #fff;
+    margin-bottom: 2%;
+    background-color: #ff4500;
+    border: 1px solid #ff4500;
+    display: inline-block;
+}
+
+.butn:hover {
+    background-color: #ff8a00cf;
+    border: 1px solid #ff8a00cf;
+    cursor: pointer;
+    display: inline;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+}
+
+@media screen and (max-width: 600px) {
+
+    .col-25,
+    .col-75,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#form2 {
+    background: rgba(0, 0, 0, 0.4);
+    float: inherit;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 3% auto;
+    width:  450px;
+    font-size: 1.3rem;
+
+
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    color: white;
+}
+
+.footer h5 {
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+}
+#forget{
+    text-decoration: none;
+    color:dimgray;
+    font-size: 1rem;
+    
+}
+#forget:hover{
+    text-decoration: underline;
+    color: aliceblue;
+}
+#form3{
+    background: rgba(0, 0, 0, 0.4);
+    float: inherit;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 3% auto;
+    width:  70%;
+    font-size: 1.3rem;
+}
+#hakkimizda{
+     background: rgba(0, 0, 0, 0.7);
+    float: inherit;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 3% auto;
+    width:  70%;
+    font-size: 1rem;
+    color: whitesmoke;
+    text-align: justify;
+}

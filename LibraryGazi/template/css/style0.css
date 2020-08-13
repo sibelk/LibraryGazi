@@ -1,0 +1,10 @@
+.navbar{
+    opacity: 0.8;
+    border-bottom: 1px solid #fff;
+}
+li{
+    list-style:none;
+    display: inline;
+    float: left;
+    padding-right: 20px;
+}

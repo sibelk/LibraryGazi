@@ -1,0 +1,26 @@
+﻿
+    <ul class="navbar-nav mx-2 my-lg-0">
+
+        @if (Request.IsAuthenticated)
+        {
+            <li class="nav-item ml-1">
+                <a href="/Account" class="nav-link active">Merhaba @User.Identity.Name</a>
+            </li>
+            <li class="nav-item ml-1">
+                <a href="/Account/Logout" class="nav-link active bg-danger"><i class="fas fa-power-off"></i>&nbsp;Çıkış</a>
+            </li>
+
+
+        }
+        else
+        {
+            <li class="nav-item ml-2">
+                <a href="/Account/Register" class="nav-link active">Kaydol</a>
+            </li>
+            <li class="nav-item ml-1">
+                <a href="/Account/Login" class="nav-link active"><i class="fas fa-user"></i>&nbsp;Üye Giriş</a>
+            </li>
+
+
+        }
+    </ul>

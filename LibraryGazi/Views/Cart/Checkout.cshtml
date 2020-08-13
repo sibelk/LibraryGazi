@@ -1,0 +1,73 @@
+﻿@model LibraryGazi.Models.RequestDetails
+@{
+    ViewBag.Title = "Checkout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <link href="@Url.Content("~/Content/themes/base/minified/jquery-ui.min.css")" rel="stylesheet" />
+    <style> 
+    
+    .field-validation-error{color:#f00;}
+    .field-validation-valid{display:none;}
+    .input-validation-error{border:1px solid #f00;background-color:#fee}
+        .validation-summary-errors {
+            font-weight: bold;
+            color: #f00 }
+     .validation-summary-valid{display:none}
+
+    
+    </style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>İstek bilgilerini doldurunuz.</h2>
+            <hr />
+            @using (Html.BeginForm())
+            {
+                <div class="form-group row">
+                    <label for="input" class="col-sm-2 col-form-label text-dark">Ad:</label>
+                    <span class="badge-danger">@User.Identity.Name</span>
+                    <div class="col-sm-6"></div>
+
+                </div>
+                @Html.ValidationSummary()
+                <div class="form-group row">
+                    <label for="input" class="col-sm-2 col-form-label text-dark">Alış Tarih:</label>
+                    @Html.EditorFor(x => x.alisTarihi, new { @class = "form-control date-picker" })
+                    <div class="col-sm-6"></div>
+
+                </div>
+                <div class="form-group row">
+                    <label for="input" class="col-sm-2 col-form-label text-dark">Veriş Tarih:</label>
+                    @Html.EditorFor(x => x.verisTarihi, new { @class = "form-control date-picker" })
+                    <div class="col-sm-6"></div>
+
+                </div>
+                <div class="form-group row">
+                    <label for="input" class="col-sm-2 col-form-label"></label>
+
+                    <div class="col-sm-6">
+                        <button type="submit" class="btn btn-primary"> İste</button>
+                    </div>
+
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<!-- jQuery UI CSS Reference -->
+
+<!-- Required jQuery and jQuery UI Javascript references -->
+<script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")"></script>
+<script src="@Url.Content("~/Scripts/jquery-ui-1.10.4.min.js")"></script>
+<script type="text/javascript">
+    $(function () {
+        // This will make every element with the class "date-picker" into a DatePicker element
+        $('.date-picker').datepicker();
+    })
+</script>

@@ -1,0 +1,44 @@
+﻿@using LibraryGazi.Entity
+@model Book
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+<div id="product-details" class="container pb-5">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="~/template/photos/1.jpg" class="img-fluid rounded"  />
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>   @Model.bookName </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>Yazar: @Model.Author.author_name </h4>
+                    <h4>Yayınevi: @Model.Publisher.publisher_name </h4>
+                    <h4>Tür: @Model.Category.category_name </h4>
+                    <h4>Adet: @Model.bookStock </h4>
+
+                </div>
+            </div>
+            @using (Html.BeginForm("AddToCart","Cart"))
+            {
+                @Html.HiddenFor(i => i.Id)
+                <button type="submit" class="btn btn-success">
+            <i class="fa fa-cart-plus " arria-hidden=true></i>Sepete Ekle</button>
+            }
+        </div>
+      
+    </div>
+
+
+
+
+
+</div>
+

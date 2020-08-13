@@ -1,0 +1,41 @@
+﻿@model IEnumerable<LibraryGazi.Models.AdminOrderModel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+    <div class="container pb-5">
+        <h2>Kitap İstekleri</h2>
+        <hr />  
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>İstek Numarası</td>
+                    <td>İstek Tarihi</td>
+                    <td>istek Durumu</td>
+                    <td>Alış Tarihi</td>
+                    <td>Veriş Tarihi</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+
+                <tr>
+                    <td>@item.OrderState</td>
+                    <td>@item.Id</td>
+                    <td>@item.OrderDate</td>
+                    <td>@item.AlisTarihi</td>
+                    <td>@item.VerisTarihi</td>
+                    <td>@item.Count</td>
+                    <td>
+                        @Html.ActionLink("Detaylar", "Details", new { id = item.Id }, new { @class = "btn btn-primary btn-sm" })
+                    </td>
+                </tr>
+
+                }
+            </tbody>
+        </table>
+    </div>
+

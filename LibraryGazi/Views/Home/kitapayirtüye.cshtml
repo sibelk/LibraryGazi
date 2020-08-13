@@ -1,0 +1,47 @@
+﻿@using LibraryGazi.Entity;
+@model IEnumerable<Book>
+@{
+    ViewBag.Title = "AramaSonuc";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js">   </script>
+
+ 
+
+    <div class="col-md-7 mt-5">
+        @using (Html.BeginForm("kitapayirtüye", "Home", FormMethod.Get))
+        {
+
+
+        
+        <div class="input-group mb-3 input-group-sm">
+            <select id="subject" name="subject" class="form-control dropdown" required="required" aria-haspopup="true" aria-expanded="false">
+                <option value="na" selected="">Seçin:</option>
+                <option value="0">Kitap Adı</option>
+                <option value="1">Yazar</option>
+                <option value="2">Kategori</option>
+                <option value="3">Yayınevi</option>
+
+            </select>
+            <input type="text" name="ayirt" class="form-control">
+            <div class="input-group-append"> <button type="submit" class="btn btn-block btn-success" value="submit">Ara</button> </div>
+        </div>
+
+
+        }
+    </div>
+
+<div class="row mt-5">
+    <div class="col-md-9">
+
+        @Html.Action("KitapAyirt", "Home")
+    </div>
+</div>
+
+
+<script>
+
+    $("#sec").change(function (){
+        $(this).val();
+    });
+</script>

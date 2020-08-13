@@ -1,0 +1,75 @@
+﻿@model LibraryGazi.Models.OrderDetailsModel
+  @using LibraryGazi.Entity;
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>İstek Detay Bilgileri</h2>
+                <hr />
+                <dl class="row">
+                    <dt class="col-sm-3">İstek Durumu:</dt>
+                    <dd class="col-sm-9">
+
+                        @if (Model.OrderState == EnumOrderState.Bekleniyor)
+                        {
+                            <span class="badge badge-warning">@Model.OrderState</span>
+                        }
+                        else if(Model.OrderState == EnumOrderState.Tamamlandı)
+                        {
+                            <span class="badge badge-success">@Model.OrderState</span>
+                        }
+                    </dd>
+
+                    <dt class="col-sm-3">İstek Id:</dt>
+                    <dd class="col-sm-9">@Model.OrderId</dd>
+
+                    <dt class="col-sm-3">İstek Numarası:</dt>
+                    <dd class="col-sm-9">@Model.OrderNumber</dd>
+
+                    <dt class="col-sm-3">İstek Tarihi:</dt>
+                    <dd class="col-sm-9">@Model.OrderDate</dd>
+
+                    <dt class="col-sm-3">Kitap Almaya Geleceğiniz Tarih:</dt>
+                    <dd class="col-sm-9">@Model.AlisTarihi.ToShortDateString()</dd>
+
+                    <dt class="col-sm-3">Kitap Vermeye Geleceğiniz Tarih:</dt>
+                    <dd class="col-sm-9">@Model.VerisTarihi.ToShortDateString()</dd>
+
+                    <dt class="col-sm-3">Kitaplar:</dt>
+                    <dd class="col-sm-9">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                    <td>Kitap Adı</td>
+                                    <td></td>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.OrderLines)
+                                {
+
+                                <tr>
+                                    <td>
+                                        <img src="~/template/photos/1.jpg"  width="70" alt="Alternate Text" />
+                                    </td>
+                                    <td>@item.BookName</td>
+                                    <td><a href="/Home/Details/@item.BookId" class="btn btn-primary" target="_blank" >Kitap Detayı</a></td>
+                                
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </dd>
+
+
+                </dl>
+            </div>
+        </div>
+    </div>
+
