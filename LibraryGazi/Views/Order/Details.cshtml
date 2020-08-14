@@ -12,32 +12,36 @@
             <h2>İstek Detay Bilgileri</h2>
             <hr />
             <dl class="row">
-                <dt class="col-sm-3">İstek Durumu:</dt>
-                <dd class="col-sm-7">
+               
+                <dd class="col-sm-12">
                     @if (TempData["message"] != null)
                     {
                         <div class="alert alert-success">
                             @TempData["message"]
                         </div>
                     }
+                </dd>
+                <dt class="col-sm-3">İstek Durumu:</dt>
+                <dd class="col-sm-9">
+                   
+
+                        @using (Html.BeginForm("UpdateOrderState", "Order", FormMethod.Post))
+                        {
+                            @Html.HiddenFor(i => i.OrderId)
+                            <div class="col-md-6">
+                                @Html.EnumDropDownListFor(i => i.OrderState, "İstek durumu seçin:", new { @class = "form-control" })
+                            </div>
+                            <div class="col-md-3">
+                                <button type="submit" class="btn btn-primary">Güncelle</button>
+                            </div>
+                        }
+                
+                </dd>
                 <dt class="col-sm-3">Kullanıcı Adı:</dt>
                 <dd class="col-sm-9">@Model.UserName</dd>
 
-                <div class="row">
+                
 
-
-                    @using (Html.BeginForm("UpdateOrderState", "Order", FormMethod.Post))
-                    {
-                        @Html.HiddenFor(i => i.OrderId)
-                        <div class="col-md-9">
-                            @Html.EnumDropDownListFor(i => i.OrderState, "İstek durumu seçin:", new { @class = "form-control" })
-                        </div>
-                        <div class="col-md-3">
-                            <button type="submit" class="btn btn-primary">Güncelle</button>
-                        </div>
-                    }
-                </div>
-              
 
                 <dt class="col-sm-3">İstek Id:</dt>
                 <dd class="col-sm-9">@Model.OrderId</dd>
@@ -60,7 +64,7 @@
                         <thead>
                             <tr>
                                 <td></td>
-                                <td>Kitap Adı</td>
+                                <td></td>
                                 <td></td>
 
                             </tr>

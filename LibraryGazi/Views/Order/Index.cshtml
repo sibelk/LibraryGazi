@@ -10,10 +10,9 @@
         <table class="table table-hover">
             <thead>
                 <tr>
-                    <td>Id</td>
-                    <td>İstek Numarası</td>
+                    <td>İstek Durumu</td>
+                    <td>İstek No.</td>
                     <td>İstek Tarihi</td>
-                    <td>istek Durumu</td>
                     <td>Alış Tarihi</td>
                     <td>Veriş Tarihi</td>
                 </tr>
@@ -24,11 +23,11 @@
 
                 <tr>
                     <td>@item.OrderState</td>
-                    <td>@item.Id</td>
+                    <td>@item.OrderNumber</td>
                     <td>@item.OrderDate</td>
                     <td>@item.AlisTarihi</td>
                     <td>@item.VerisTarihi</td>
-                    <td>@item.Count</td>
+                    
                     <td>
                         @Html.ActionLink("Detaylar", "Details", new { id = item.Id }, new { @class = "btn btn-primary btn-sm" })
                     </td>
