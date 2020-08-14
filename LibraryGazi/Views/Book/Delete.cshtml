@@ -5,15 +5,15 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 <div class="container mt-5">
-    <h2>Kitap Sil</h2>
+   
 
     <h3>Silmek istediğinize emin misiniz?</h3>
     <div>
-        <h4>Book</h4>
+       
         <hr />
         <dl class="dl-horizontal">
             <dt>
-                @Html.DisplayNameFor(model => model.Author.author_name)
+                <label class="control-label  text-dark">Yazar  :</label>
             </dt>
 
             <dd>
@@ -21,7 +21,7 @@
             </dd>
 
             <dt>
-                @Html.DisplayNameFor(model => model.Category.category_name)
+                <label class="control-label  text-dark">Kategori  :</label>
             </dt>
 
             <dd>
@@ -29,7 +29,7 @@
             </dd>
 
             <dt>
-                @Html.DisplayNameFor(model => model.Publisher.publisher_name)
+                <label class="control-label  text-dark">Yayınevi :</label>
             </dt>
 
             <dd>
@@ -37,7 +37,7 @@
             </dd>
 
             <dt>
-                @Html.DisplayNameFor(model => model.bookName)
+                <label class="control-label  text-dark">Kitap Adı :</label>
             </dt>
 
             <dd>
@@ -45,7 +45,7 @@
             </dd>
 
             <dt>
-                @Html.DisplayNameFor(model => model.bookStock)
+                <label class="control-label  text-dark">Stok :</label>
             </dt>
 
             <dd>

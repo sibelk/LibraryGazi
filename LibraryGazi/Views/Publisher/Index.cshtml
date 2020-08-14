@@ -8,12 +8,12 @@
 
 
     <p>
-        @Html.ActionLink("Create New", "Create")
+        @Html.ActionLink("+ YENİ", "Create", null, new { @class = "btn btn-success" })
     </p>
     <table class="table">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.publisher_name)
+                <label class="control-label  text-dark">Yayınevleri</label>
             </th>
             <th></th>
         </tr>

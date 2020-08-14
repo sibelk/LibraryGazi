@@ -8,25 +8,25 @@
    
 
     <p>
-        @Html.ActionLink("Create New", "Create",null, new { @class = "btn btn-success" })
+        @Html.ActionLink("+ YENİ", "Create",null, new { @class = "btn btn-success" })
     </p>
     <table class="table">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.bookName)
+                <label class="control-label  text-dark">Kitap </label>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Author.author_name)
+                <label class="control-label text-dark">Yazar </label>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Category.category_name)
+                 <label class="control-label text-dark">Kategori </label>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Publisher.publisher_name)
+                <label class="control-label text-dark">Yayınevi </label>
             </th>
 
             <th>
-                @Html.DisplayNameFor(model => model.bookStock)
+                <label class="control-label text-dark">Stok </label>
             </th>
             <th></th>
         </tr>
