@@ -59,6 +59,13 @@ namespace LibraryGazi.Controllers
             if (order!=null)
             {
                 order.OrderState = OrderState;
+                if(order.OrderState == EnumOrderState.Tamamlandı)
+                {
+                   foreach(var  book in order.OrderLines)
+                    {
+                        book.Book.bookStock = -1;
+                    }
+                }
                 db.SaveChanges();
                 TempData["message"] = "Bilgiler Kaydedildi.";
                 return RedirectToAction("Details", new { id = OrderId });

@@ -21,7 +21,7 @@ namespace LibraryGazi.Controllers
         public ActionResult AddToCart(int Id)
         {
             var book = db.Books.FirstOrDefault(i => i.Id == Id);
-            if (book != null)
+            if (book != null && book.bookStock >0)
             {
                 GetCart().AddBook(book);
             }
@@ -94,6 +94,9 @@ namespace LibraryGazi.Controllers
                 OrderLine orderline = new OrderLine();
                 orderline.BookId = item.Book.Id;
                 order.OrderLines.Add(orderline);
+                //item.Book.bookStock = item.Book.bookStock - 1;
+               
+
 
             }
             db.Orders.Add(order);

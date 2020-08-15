@@ -87,6 +87,7 @@ namespace LibraryGazi.Controllers
                 user.Name = model.Name;
                 user.SurName = model.SurName;
                 user.Email = model.Email;
+                user.UserName = model.Email;
 
 
                IdentityResult result= UserManager.Create(user, model.Password);

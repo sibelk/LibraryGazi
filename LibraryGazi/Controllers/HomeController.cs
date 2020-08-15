@@ -67,7 +67,7 @@ namespace LibraryGazi.Controllers
                            select s;
             if (!string.IsNullOrEmpty(ayirt))
             {
-                //buraya if ekle select list ten gelen arama kriteti değerine göre kitaplar = kitaplar.Where(s => s.bookName.Contains(ayirt)); de bookName yerine yazar vs yaz.
+                //buraya if ekle select list ten gelen arama kriteri değerine göre kitaplar = kitaplar.Where(s => s.bookName.Contains(ayirt)); de bookName yerine yazar vs yaz.
                 kitaplar = kitaplar.Where(s => s.bookName.Contains(ayirt));
             }
 

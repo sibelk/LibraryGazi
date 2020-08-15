@@ -29,11 +29,11 @@ namespace LibraryGazi.Identity
                 manager.Create(role);
             }
 
-            if (!context.Users.Any(i => i.Name == "sibelkeles"))
+            if (!context.Users.Any(i => i.Name == "sibelkeles@gmail.com"))
             {
                 var store = new UserStore<ApplicationUser>(context);
                 var manager = new UserManager<ApplicationUser>(store);
-                var user = new ApplicationUser() {Name="sibel", SurName="keles", UserName="sibelkeles" , Email="sibelkeles@gmail.com" };
+                var user = new ApplicationUser() {Name="sibel", SurName="keles", UserName= "sibelkeles@gmail.com", Email="sibelkeles@gmail.com" };
 
                 manager.Create(user, "Sibelkeles18.");
 
@@ -44,7 +44,7 @@ namespace LibraryGazi.Identity
             {
                 var store = new UserStore<ApplicationUser>(context);
                 var manager = new UserManager<ApplicationUser>(store);
-                var user = new ApplicationUser() { Name = "hilal", SurName = "üçdal", UserName = "hilalucdal", Email = "hilalucdal@gmail.com" };
+                var user = new ApplicationUser() { Name = "hilal", SurName = "üçdal", UserName = "hilalucdal@gmail.com", Email = "hilalucdal@gmail.com" };
 
                 manager.Create(user, "Sibelkeles18.");
      
