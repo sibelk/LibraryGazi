@@ -8,6 +8,7 @@ namespace LibraryGazi.Entity
     public enum EnumOrderState
     {
         Bekleniyor,
-        Tamamlandı
+        Tamamlandı,
+        Getirecek
     }
 }

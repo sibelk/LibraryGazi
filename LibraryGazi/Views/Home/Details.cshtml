@@ -26,11 +26,19 @@
 
                 </div>
             </div>
-            @using (Html.BeginForm("AddToCart","Cart"))
+            @{
+                string Disabled = "";
+                if (Model.bookStock <=0)
+                {
+                    Disabled = "disabled";
+                }
+            }
+            @using (Html.BeginForm("AddToCart", "Cart"))
             {
                 @Html.HiddenFor(i => i.Id)
-                <button type="submit" class="btn btn-success">
-            <i class="fa fa-cart-plus " arria-hidden=true></i>Sepete Ekle</button>
+                <button type="submit" class="btn btn-success" @Disabled>
+                    <i class="fa fa-cart-plus " arria-hidden=true></i>Sepete Ekle
+                </button>
             }
         </div>
       

@@ -63,7 +63,7 @@ namespace LibraryGazi.Controllers
                 {
                    foreach(var  book in order.OrderLines)
                     {
-                        book.Book.bookStock = -1;
+                        book.Book.bookStock -=1;
                     }
                 }
                 db.SaveChanges();

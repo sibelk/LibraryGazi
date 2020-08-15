@@ -34,6 +34,7 @@ namespace LibraryGazi.Controllers
             {
                 return HttpNotFound();
             }
+           
             return View(book);
         }
 

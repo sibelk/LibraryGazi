@@ -23,19 +23,25 @@
                 </dd>
                 <dt class="col-sm-3">İstek Durumu:</dt>
                 <dd class="col-sm-9">
-                   
-
-                        @using (Html.BeginForm("UpdateOrderState", "Order", FormMethod.Post))
+                    @{
+                        string Disabled = "";
+                        if (Model.OrderState == EnumOrderState.Getirecek)
                         {
-                            @Html.HiddenFor(i => i.OrderId)
-                            <div class="col-md-6">
-                                @Html.EnumDropDownListFor(i => i.OrderState, "İstek durumu seçin:", new { @class = "form-control" })
-                            </div>
-                            <div class="col-md-3">
-                                <button type="submit" class="btn btn-primary">Güncelle</button>
-                            </div>
+                            Disabled = "disabled";
                         }
-                
+                    }
+
+                    @using (Html.BeginForm("UpdateOrderState", "Order", FormMethod.Post))
+                    {
+                        @Html.HiddenFor(i => i.OrderId)
+                        <div class="col-sm-6">
+                            @Html.EnumDropDownListFor(i => i.OrderState, "İstek durumu seçin:", new { @class = "form-control" })
+                        </div>
+                        <div class="col-sm-3">
+                            <button type="submit" class="btn btn-primary" @Disabled>Güncelle</button>
+                        </div>
+                    }
+
                 </dd>
                 <dt class="col-sm-3">Kullanıcı Adı:</dt>
                 <dd class="col-sm-9">@Model.UserName</dd>

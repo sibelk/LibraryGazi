@@ -13,16 +13,16 @@ namespace LibraryGazi.Entity
         public int bookStock { get; set; }
 
 
-        public int AuthorId { get; set; }
+        public int? AuthorId { get; set; }
         public Author Author { get; set; }
 
 
 
-        public int PublisherId { get; set; }
+        public int? PublisherId { get; set; }
         public Publisher Publisher { get; set; }
 
 
-        public int CategoryId { get; set; }
+        public int? CategoryId { get; set; }
         public Category Category { get; set; }
 
     }
